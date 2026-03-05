@@ -1,14 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
     <title>Crônicas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    
+
 </head>
 <body>
-    <div id="tutorial-popup" class="popup">
-        <div class="popup-conteudo">
-            <h2> CRôNICAS DE FASPASOL </h2>
-        </div>
+
+<div class="popup-overlay moderno" id="popupOverlayInicial">
+    <div class="popup" id="popupInicial">
+        <h2>feliz aniversário</h2>
+        <div class="popupConteudo"> </div>
+            <p>
+                eu tenho essa ideia que tu acha que eu não gosto dos rps [mais]. talvez tenha alguma coerência pq fui eu afinal quem parou de responder,
+                que tu começou a ter que implorar pra uma ação doq era pra ser nos duas (foi mal gng). mas a verdade é que nosso mundinho é mt precioso pra mim,
+                genuinamente, eram tardes inteiras na pandemia sorrindo e escrevendo ações q hj a gente pode olhar de volta e ler e pensar puta merda a gente era idiota.
+                ou só por ser histórias que a gente criou nos mesmas, um mundo inteiro, dinâmicas, personagens, um negócio só nosso. eu n sou muito boa em explicar meus sentimentos
+                mas eu não quero que tu pense que é uma coisa que eu só parei de me importar, ou q eu esqueci, ou q eu não gostava.
+            </p>
+            <p> gosto tanto afinal que eu criei isso aqui. é tipo um leitor da história mais ou menos, com algumas coisas extra, um pouco mais interativa. e os comentário da autora
+                (passa o mouse por cima dos bagulho sublinhado). espero q goste linda
+            </p>
+            <p>
+                preparada?
+            </p>
+
+        </fieldset>
+
+        <label>
+            <input type="checkbox" id="naoMostrarMais">
+            cala a boca
+        </label>
+
+        <button id="fecharPopup">okaayyy &lt;3</button>
     </div>
+</div>
+
+<div class='menu-1 rustico' id="menu-1">
+    <audio id="menuMusic" src="css/assets/audio/mp3/Snowfall.mp3" preload="auto"></audio>
+
+    <h1 class="titulo-menu rustico"></h1>
+
+    <div class="butoes-menu rustico">
+        <button class="game-button" onclick="window.location.href='historia.html'"> iniciar </button>
+        <button class="game-button"> quizes </button>
+        <button class="game-button"> extras </button>
+    </div>
+
+    <p class="aviso-fones"> 🎧 uso de fones recomendado</p>
+
+</div>
+
+<div class="menu-2 rustico" id="menu-2">
+
+</div>
 
 </body>
 </html>

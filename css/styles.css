@@ -1,0 +1,565 @@
+/* #region MODERNO */
+
+.moderno {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.moderno h2 {
+    color: #e2e2e2;
+    margin-top: 2px;
+}
+
+.moderno p {
+    color: #d0d0d0;
+}
+
+.moderno label {
+    display: block;
+    margin: 16px 0;
+    cursor: pointer;
+}
+
+.moderno button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;       
+  background-color: #2a2d33;
+  color: #cfcfcf;
+
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+
+}
+
+.moderno button:hover {
+  background-color: #343840;
+  transform: scale(1.05);
+}
+
+
+/* #endregion */
+
+/* #region RUSTICO */
+.rustico {
+    font-family: 'VT323', monospace;
+}
+
+.rustico h1, h1.rustico {
+  font-size: 90px;
+
+  color: #0b1a4d;
+
+  text-shadow:
+    -1px -1px 0 #6a8c8f,
+     1px -1px 0 #6a8c8f,
+    -1px  1px 0 #6a8c8f,
+     1px  1px 0 #6a8c8f;
+
+}
+
+.rustico p {
+  
+  text-shadow:
+      -1px -1px 0 #383838,
+      1px -1px 0 #383838,
+      -1px  1px 0 #383838,
+      1px  1px 0 #383838;
+
+  color: #ebebeb;
+
+
+}
+/* #endregion */
+
+/* #region menu-1*/
+
+.menu-1 {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url('assets/images/index/backgroundMenu1.gif');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+
+}
+
+.titulo-menu {
+  position: relative;
+  text-align: center;
+  top: 20px;
+}
+
+.aviso-fones {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  font-family: 'VT323', monospace;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+
+  user-select: none;
+
+}
+
+.butoes-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  pointer-events: none; 
+  transition: opacity 0.5s ease;
+}
+
+.game-button {
+  opacity: 0;
+
+  font-family: 'VT323', monospace;
+  font-size: 50px;
+
+  color: #6a8c8f;             /* texto branco */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+
+  /* contorno pixel / efeito legível */
+  text-shadow:
+    -2px -2px 0 #0b1a4d,
+     2px -2px 0 #0b1a4d,
+    -2px  2px 0 #0b1a4d,
+     2px  2px 0 #0b1a4d;
+
+  transition: all 0.1s linear;
+
+}
+
+.game-button:hover {
+  color: #ffd369;  /* amarelo RPG */
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     0 0 6px #ffd369; /* glow leve */
+  transform: translateY(-2px);
+}
+
+.game-button:active {
+  transform: translateY(0);
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+}
+
+
+/* #endregion */
+
+/* #region popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center; /* centro horizontal */
+    align-items: center;     /* centro vertical */
+
+    background-color: #222831;
+    background-image: url('assets/images/index/backgroundInicial.jpg');
+    background-size: cover;     
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.popup {
+
+    /* istetica */
+    background-color: #1f2228;
+    color: #d6d6d6;
+
+    line-height: 1.6;
+
+    /* imudavel */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 16px;
+    max-width: 900px;
+}
+
+/* #endregion */
+
+/* regiao historia */
+
+/* ---------------- CENA ---------------- */
+.cena {
+  user-seLect: none;
+
+  font-size: 24px;
+  
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+}
+.cena.ativa {
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 0.2s;
+
+}
+
+/* ---------------- SCROLLER ---------------- */
+.texto-container {
+    position: relative;        /* mantém no fluxo da página */
+  height: 90%;               /* altura da caixa de texto */
+  margin-left: auto;          /* empurra para a direita */
+  overflow-y: auto;           /* scroll vertical */
+  padding: 10px;
+  box-sizing: border-box;
+  scrollbar-width: thin;      /* Firefox */
+  scrollbar-color: #6a8c8f transparent;
+}
+.texto-container::-webkit-scrollbar {
+  width: 8px;
+}
+.texto-container::-webkit-scrollbar-thumb {
+  background-color: #6a8c8f;
+  border-radius: 4px;
+}
+
+/* ---------------- NARRAÇÃO/FALA/AÇÃO ESCOLHA ---------------- */
+.rustico p.narracao.fala {
+  color: #c9c9c9;
+  font-style: normal;
+}
+.rustico p.narracao {
+  font-style: italic;
+  color: #77776f;
+}
+.rustico p.acao {
+  font-weight:lighter;
+  color: #a3a3a3;
+}
+
+/* ---------------- BOTÃO PRÓXIMA CENA ---------------- */
+.next-scene {
+  user-select: none;
+
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  font-family: 'VT323', monospace;
+  font-size: 48px;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+
+  opacity: 0.7;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.next-scene:hover {
+  opacity: 1;
+  transform: translateX(4px);
+}
+.next-scene:active {
+  transform: translateX(6px);
+}
+
+/* ---------------- MENSAGENS ---------------- */
+.mensagem {
+  position: relative;
+  border: 2px solid black;
+  display: block;
+
+  border-radius: 12px;
+  padding: 12px 16px 16px 16px;
+  margin-bottom: 20px;             /* espaço entre caixas */
+  max-width: fit-content;
+
+  text-align: center;
+  
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+.mensagem .nome {
+  position: absolute;
+  top: 2px;
+  left: 12px;
+  padding: 2px 8px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  color: #bdbdbd;
+}
+.mensagem.armadura {
+  border-color: #222222;
+}
+.mensagem.uzou {
+  border-color: #151B54;
+}
+
+.mensagem.armis {
+  border-color: #6b0606;
+}
+
+.mensagem.amigo {
+  border-color: #3a741f;
+}
+.mensagem.inimigo {
+  animation: heartbeat 1s infinite;
+}
+.mensagem.morto {
+  border-color: #686767;
+  animation: none;
+}
+
+.highlight-green {
+  color: #3a741f;
+}
+.highlight-red {
+  color: #ff0000;
+}
+
+
+
+@keyframes heartbeat {
+  0%   { border-color: #ff0000; transform: scale(1); }
+  25%  { border-color: #ff4d4d; transform: scale(1.01); } /* pulse */
+  50%  { border-color: #ff0000; transform: scale(1.); }
+  75%  { border-color: #ff4d4d; transform: scale(1.01); }
+  100% { border-color: #ff0000; transform: scale(1); }
+}
+
+
+/* ---------------- TABS ---------------- */
+.information-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 50;
+  font-family: 'VT323', monospace;
+}
+
+
+/* #endregion */
+
+/* #region CENA INTRODUÇÃO */
+.introducao {
+
+  background-image: url(assets/images/historia/backgrounds/background_introduction.png);
+
+}
+
+.introducao p {
+  position: relative;
+  top: 30px;
+  left: 20px;
+
+  line-height: 1.4;
+
+  max-width: 1000px;      
+  text-align: center;
+}
+
+/* #endregion */
+
+/* #region CENA CAVERNA */
+
+.caverna .mensagem {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.caverna { 
+  background-image: url(assets/images/historia/backgrounds/background_campfire.png);
+
+}
+
+.caverna p {
+  font-size: 20px;
+  
+  position: relative;      /* mantém no fluxo da página */
+  
+  margin-left: auto;       /* empurra o <p> para a direita */
+  margin-right: 20px;      /* espaço do canto da tela */
+  margin-top: 20px;
+
+  gap: 15px;
+
+  max-width: 40vw;         /* largura máxima da coluna direita */
+  text-align: center;       /* texto alinhado à direita */
+  
+  line-height: 1.4;
+  user-select: none;
+  margin-bottom: 16px;     /* espaçamento entre parágrafos */
+
+
+}
+
+/* #endregion */
+
+/* #region CENA DESERTO */
+
+.deserto {
+  background-image: url(assets/images/historia/backgrounds/background_deserto.png);
+}
+
+.deserto p {
+  font-size: 20px;
+
+  position: relative;      /* mantém no fluxo da página */
+  
+  margin-left: auto;       /* empurra o <p> para a direita */
+  margin-right: auto;      /* espaço do canto da tela */
+  margin-top: 20px;
+
+  gap: 15px;
+
+  max-width: 40vw;         /* largura máxima da coluna direita */
+  text-align: center;       /* texto alinhado à direita */
+  
+  line-height: 1.4;
+  user-select: none;
+  margin-bottom: 16px;     /* espaçamento entre parágrafos */
+
+
+}
+
+.deserto .mensagem {
+  margin-left: auto;
+  margin-right: auto;
+
+  border-width: 4px;
+  background-color: rgba(15, 15, 15, 0.6);
+}
+
+/* #endregion */
+
+/* #region CENA VILA */
+.vila {
+  background-image: url(assets/images/historia/backgrounds/background_vila.png);
+}
+
+.vila .mensagem {
+  margin-left: 20px;
+  margin-right: auto;
+  
+  border-width: 4px;
+  background-color: rgba(15, 15, 15, 0.6);
+
+}
+
+.vila p {
+  font-size: 20px;
+  
+  position: relative;      
+  
+  margin-left: 20px;       
+  margin-right: auto;      
+  margin-top: 20px;
+
+  gap: 15px;
+
+  max-width: 40vw;         /* largura máxima da coluna direita */
+  text-align: center;       /* texto alinhado à direita */
+  
+  line-height: 1.4;
+  user-select: none;
+  margin-bottom: 16px;    
+
+
+}
+
+/* #endregion */
+
+/* #region TOOLTIP */
+.tooltip {
+  position: relative;
+  display: inline;
+  cursor: pointer;
+
+  text-decoration: underline dotted;
+  color: #ebebeb;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-img {
+  width: 160px;
+  height: 160px;
+}
+
+/* #endregion */
